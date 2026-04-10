@@ -6,7 +6,9 @@ int main()
     int cpfs_ativos[] = {11, 22, 33, 44, 55, 66, 77, 88, 99, 110};
     int tamanho = 10;
     int alvo = 99;
-    int novo_cpf = 25;
+    int novo_cpf = 0;
+    printf("DIGITE O NOVO CPF A SER INSERIDO: ");
+    scanf("%d", &novo_cpf);
     int pos = 0; 
     while (pos < tamanho && cpfs_ativos[pos] < novo_cpf) {
         pos++;
@@ -17,7 +19,7 @@ int main()
     }
     cpfs_ativos[pos] = novo_cpf;
     tamanho++;
-    alvo = 25;
+    alvo = novo_cpf;
     
     printf("--FASE 1 BUSCANDO O PELO CPF %d--\n", alvo);
 
